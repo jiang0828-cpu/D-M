@@ -12,7 +12,7 @@ permissions:
 
 concurrency:
   group: "pages"
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   deploy:
@@ -25,6 +25,10 @@ jobs:
         uses: actions/checkout@v4
       - name: Setup Pages
         uses: actions/configure-pages@v5
+      - name: Prepare static site
+        run: |
+          test -f guanghe-zhongan-site/index.html
+          touch guanghe-zhongan-site/.nojekyll
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
