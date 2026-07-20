@@ -20,89 +20,20 @@
     }
     * { box-sizing: border-box; }
     html { scroll-behavior: smooth; }
-    body {
-      margin: 0;
-      color: var(--ink);
-      background: var(--paper);
-      font-family: "Microsoft YaHei", "PingFang SC", Arial, sans-serif;
-    }
+    body { margin: 0; color: var(--ink); background: var(--paper); font-family: "Microsoft YaHei", "PingFang SC", Arial, sans-serif; }
     a { color: inherit; text-decoration: none; }
-    .header {
-      position: sticky;
-      top: 0;
-      z-index: 10;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 20px;
-      padding: 16px clamp(18px, 5vw, 72px);
-      background: rgba(255, 255, 255, 0.94);
-      border-bottom: 1px solid var(--line);
-      backdrop-filter: blur(14px);
-    }
+    .header { position: sticky; top: 0; z-index: 10; display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 16px clamp(18px, 5vw, 72px); background: rgba(255, 255, 255, 0.94); border-bottom: 1px solid var(--line); backdrop-filter: blur(14px); }
     .brand { display: flex; align-items: center; gap: 12px; }
-    .brand-mark {
-      display: grid;
-      width: 42px;
-      height: 42px;
-      place-items: center;
-      border-radius: 8px;
-      color: #fff;
-      font-weight: 800;
-      background: linear-gradient(135deg, var(--teal), var(--blue));
-    }
+    .brand-mark { display: grid; width: 42px; height: 42px; place-items: center; border-radius: 8px; color: #fff; font-weight: 800; background: linear-gradient(135deg, var(--teal), var(--blue)); }
     .brand strong, .brand small { display: block; }
     .brand small { margin-top: 2px; color: var(--muted); font-size: 12px; }
     nav { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 8px; }
     nav a { padding: 9px 12px; border-radius: 8px; color: #40515f; font-size: 14px; }
     nav a:hover { background: var(--wash); color: var(--teal); }
-    .hero {
-      position: relative;
-      min-height: 650px;
-      display: grid;
-      grid-template-columns: minmax(0, 1fr) minmax(280px, 380px);
-      align-items: end;
-      gap: 32px;
-      padding: 110px clamp(18px, 5vw, 72px) 72px;
-      overflow: hidden;
-      isolation: isolate;
-      color: #fff;
-      background:
-        radial-gradient(circle at 72% 18%, rgba(217, 144, 47, 0.55), transparent 18%),
-        radial-gradient(circle at 82% 72%, rgba(31, 103, 177, 0.45), transparent 22%),
-        linear-gradient(125deg, #061422 0%, #0b3845 48%, #17324d 100%);
-    }
-    .hero::before {
-      position: absolute;
-      inset: 72px clamp(18px, 5vw, 72px) auto auto;
-      width: min(44vw, 560px);
-      aspect-ratio: 1.35;
-      content: "";
-      z-index: -1;
-      border: 1px solid rgba(255,255,255,.22);
-      border-radius: 8px;
-      background:
-        linear-gradient(90deg, rgba(255,255,255,.16) 1px, transparent 1px) 0 0 / 48px 48px,
-        linear-gradient(rgba(255,255,255,.12) 1px, transparent 1px) 0 0 / 48px 48px,
-        linear-gradient(135deg, rgba(255,255,255,.16), rgba(255,255,255,.04));
-      box-shadow: 0 24px 90px rgba(0,0,0,.22);
-    }
-    .hero::after {
-      position: absolute;
-      inset: auto 0 0;
-      z-index: -1;
-      height: 150px;
-      content: "";
-      background: linear-gradient(180deg, rgba(255,255,255,0), #fff 82%);
-    }
-    .kicker {
-      margin: 0 0 14px;
-      color: var(--amber);
-      font-size: 13px;
-      font-weight: 800;
-      letter-spacing: 0;
-      text-transform: uppercase;
-    }
+    .hero { position: relative; min-height: 650px; display: grid; grid-template-columns: minmax(0, 1fr) minmax(280px, 380px); align-items: end; gap: 32px; padding: 110px clamp(18px, 5vw, 72px) 72px; overflow: hidden; isolation: isolate; color: #fff; background: radial-gradient(circle at 72% 18%, rgba(217, 144, 47, 0.55), transparent 18%), radial-gradient(circle at 82% 72%, rgba(31, 103, 177, 0.45), transparent 22%), linear-gradient(125deg, #061422 0%, #0b3845 48%, #17324d 100%); }
+    .hero::before { position: absolute; inset: 72px clamp(18px, 5vw, 72px) auto auto; width: min(44vw, 560px); aspect-ratio: 1.35; content: ""; z-index: -1; border: 1px solid rgba(255,255,255,.22); border-radius: 8px; background: linear-gradient(90deg, rgba(255,255,255,.16) 1px, transparent 1px) 0 0 / 48px 48px, linear-gradient(rgba(255,255,255,.12) 1px, transparent 1px) 0 0 / 48px 48px, linear-gradient(135deg, rgba(255,255,255,.16), rgba(255,255,255,.04)); box-shadow: 0 24px 90px rgba(0,0,0,.22); }
+    .hero::after { position: absolute; inset: auto 0 0; z-index: -1; height: 150px; content: ""; background: linear-gradient(180deg, rgba(255,255,255,0), #fff 82%); }
+    .kicker { margin: 0 0 14px; color: var(--amber); font-size: 13px; font-weight: 800; letter-spacing: 0; text-transform: uppercase; }
     h1, h2, h3, p { margin-top: 0; }
     h1 { margin-bottom: 22px; font-size: clamp(42px, 7vw, 76px); line-height: 1.05; }
     .hero-copy { max-width: 690px; color: rgba(255,255,255,.88); font-size: clamp(17px, 2vw, 22px); line-height: 1.8; }
@@ -110,16 +41,7 @@
     .button { display: inline-flex; min-height: 46px; align-items: center; justify-content: center; border-radius: 8px; padding: 12px 20px; font-weight: 800; }
     .button.primary { background: var(--amber); color: #1d2730; }
     .button.ghost { border: 1px solid rgba(255,255,255,.45); color: #fff; }
-    .hero-panel {
-      align-self: center;
-      padding: 26px;
-      border: 1px solid rgba(255,255,255,.28);
-      border-radius: 8px;
-      background: rgba(12,40,55,.72);
-      color: #fff;
-      box-shadow: 0 24px 80px rgba(0,0,0,.22);
-      backdrop-filter: blur(16px);
-    }
+    .hero-panel { align-self: center; padding: 26px; border: 1px solid rgba(255,255,255,.28); border-radius: 8px; background: rgba(12,40,55,.72); color: #fff; box-shadow: 0 24px 80px rgba(0,0,0,.22); backdrop-filter: blur(16px); }
     .hero-panel span { color: #aee5df; font-size: 13px; font-weight: 800; }
     .hero-panel strong { display: block; margin-top: 12px; font-size: 24px; line-height: 1.3; }
     .hero-panel p { margin: 14px 0 0; color: rgba(255,255,255,.82); line-height: 1.75; }
@@ -164,149 +86,22 @@
     .contact { display: flex; align-items: center; justify-content: space-between; gap: 28px; margin: 0 clamp(18px, 5vw, 72px) 72px; padding: 42px; border-radius: 8px; background: linear-gradient(135deg, #e8f6f2, #f9efe1); }
     .contact h2 { max-width: 840px; }
     .contact .button { background: var(--navy); color: #fff; }
-    @media (max-width: 980px) {
-      .header { align-items: flex-start; flex-direction: column; }
-      nav { justify-content: flex-start; }
-      .hero, .section-head.split, .event-showcase, .doctor-grid { grid-template-columns: 1fr; }
-      .grid-3 { grid-template-columns: 1fr; }
-      .timeline { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-    }
-    @media (max-width: 620px) {
-      .hero { min-height: auto; padding-top: 88px; }
-      h1 { font-size: 42px; }
-      .hero-panel, .audience-card, .service-card, .event-main, .consumer-list article, .contact { padding: 22px; }
-      .timeline, .event-types { grid-template-columns: 1fr; }
-      .consumer-list article { grid-template-columns: 1fr; }
-      .contact { align-items: flex-start; flex-direction: column; }
-    }
+    @media (max-width: 980px) { .header { align-items: flex-start; flex-direction: column; } nav { justify-content: flex-start; } .hero, .section-head.split, .event-showcase, .doctor-grid { grid-template-columns: 1fr; } .grid-3 { grid-template-columns: 1fr; } .timeline { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+    @media (max-width: 620px) { .hero { min-height: auto; padding-top: 88px; } h1 { font-size: 42px; } .hero-panel, .audience-card, .service-card, .event-main, .consumer-list article, .contact { padding: 22px; } .timeline, .event-types { grid-template-columns: 1fr; } .consumer-list article { grid-template-columns: 1fr; } .contact { align-items: flex-start; flex-direction: column; } }
   </style>
 </head>
 <body>
   <header class="header">
-    <a class="brand" href="#top" aria-label="返回广和众安首页">
-      <span class="brand-mark">广</span>
-      <span>
-        <strong>广和众安</strong>
-        <small>健康医疗生态服务平台</small>
-      </span>
-    </a>
-    <nav>
-      <a href="#business">产业合作</a>
-      <a href="#doctor">学术科研</a>
-      <a href="#consumer">公众健康</a>
-      <a href="#contact">合作咨询</a>
-    </nav>
+    <a class="brand" href="#top" aria-label="返回广和众安首页"><span class="brand-mark">广</span><span><strong>广和众安</strong><small>健康医疗生态服务平台</small></span></a>
+    <nav><a href="#business">产业合作</a><a href="#doctor">学术科研</a><a href="#consumer">公众健康</a><a href="#contact">合作咨询</a></nav>
   </header>
-
   <main>
-    <section class="hero" id="top">
-      <div class="hero-content">
-        <p class="kicker">连接公众健康、医学科研与健康医疗产业</p>
-        <h1>广和众安健康医疗生态服务平台</h1>
-        <p class="hero-copy">以产业会议活动为核心入口，向医学科研服务、公众健康服务和产业资源链接延展，构建可信、专业、可协同的健康医疗服务网络。</p>
-        <div class="actions">
-          <a class="button primary" href="#business">查看会议活动服务</a>
-          <a class="button ghost" href="#ecosystem">浏览服务体系</a>
-        </div>
-      </div>
-      <aside class="hero-panel">
-        <span>产业会议平台定位</span>
-        <strong>会议活动与产业合作主阵地</strong>
-        <p>用活动聚合专家、机构、产品、渠道和行业内容，再将资源转化为长期服务能力。</p>
-      </aside>
-    </section>
-
-    <section class="section" id="ecosystem">
-      <div class="section-head">
-        <p class="kicker">Service model</p>
-        <h2>三类服务场景，一套健康医疗生态连接能力</h2>
-      </div>
-      <div class="grid-3">
-        <a class="card audience-card business" href="#business">
-          <span>产业合作</span>
-          <strong>会议活动与产业资源链接</strong>
-          <p>围绕健康医疗产业伙伴的品牌发声、学术转化、渠道共建和产业合作，提供会议活动策划与资源对接服务。</p>
-          <em>主阵地</em>
-        </a>
-        <a class="card audience-card doctor" href="#doctor">
-          <span>学术科研</span>
-          <strong>科研服务与专业成长支持</strong>
-          <p>协助临床专家与科研团队完成课题设计、研究协作、成果传播与专业发展内容建设，提升学术影响力。</p>
-          <em>科研为主</em>
-        </a>
-        <a class="card audience-card" href="#consumer">
-          <span>公众健康</span>
-          <strong>健康知识、检测与合规产品</strong>
-          <p>通过可信科普、健康检测服务和医疗保健产品展示，帮助公众与家庭更好理解健康管理选择。</p>
-          <em>健康服务</em>
-        </a>
-      </div>
-    </section>
-
-    <section class="section business-section" id="business">
-      <div class="section-head split">
-        <div>
-          <p class="kicker">产业合作</p>
-          <h2>以会议活动为主，沉淀行业影响力与合作机会</h2>
-        </div>
-        <p>广和众安帮助健康医疗产业伙伴把会议从“一次活动”升级为“内容生产、专家链接、品牌传播、资源转化”的复合型业务场景。</p>
-      </div>
-      <div class="event-showcase">
-        <div class="event-main">
-          <p class="kicker">会议活动服务流程</p>
-          <h3>从议题策划到会后转化，形成闭环</h3>
-          <div class="timeline">
-            <span>01 定位议题</span>
-            <span>02 匹配专家</span>
-            <span>03 执行活动</span>
-            <span>04 内容传播</span>
-            <span>05 资源对接</span>
-          </div>
-        </div>
-        <div class="event-types">
-          <span>产业峰会</span>
-          <span>专家圆桌</span>
-          <span>城市沙龙</span>
-          <span>产品发布</span>
-          <span>学术教育</span>
-          <span>闭门对接</span>
-        </div>
-      </div>
-      <div class="grid-3">
-        <article class="card service-card highlight"><span>核心板块</span><h3>会议活动</h3><ul><li>主题策划与议程设计</li><li>嘉宾邀请与会务执行</li><li>企业展示与内容传播</li></ul></article>
-        <article class="card service-card"><span>内容板块</span><h3>行业资讯</h3><ul><li>政策与市场动态梳理</li><li>赛道趋势观察</li><li>活动前后内容沉淀</li></ul></article>
-        <article class="card service-card"><span>生态板块</span><h3>资源对接</h3><ul><li>医院与专家资源链接</li><li>企业合作机会匹配</li><li>渠道、媒体与服务商协同</li></ul></article>
-      </div>
-    </section>
-
-    <section class="section" id="doctor">
-      <div class="section-head split">
-        <div><p class="kicker">学术科研</p><h2>以科研服务为主，支持医学专业成长</h2></div>
-        <p>面向临床专家、科室团队与学术研究者，提供从研究想法到成果传播的协作支持。</p>
-      </div>
-      <div class="doctor-grid">
-        <article class="card service-card"><span>重点</span><h3>科研服务</h3><p>覆盖选题讨论、研究方案设计、数据与统计协作、论文会议成果转化等科研关键环节。</p></article>
-        <article class="card service-card"><span>洞察</span><h3>行业资讯</h3><p>提供学科前沿、指南共识、临床研究动态和产业创新信息，帮助专业群体保持学术视野。</p></article>
-        <article class="card service-card"><span>成长</span><h3>职业发展</h3><p>支持个人学术品牌、讲课内容、会议展示、合作网络与长期职业路径建设。</p></article>
-      </div>
-    </section>
-
-    <section class="section consumer-section" id="consumer">
-      <div class="section-head split">
-        <div><p class="kicker">公众健康</p><h2>让健康信息与服务更容易被理解和选择</h2></div>
-        <p>面向公众和家庭，以清晰、审慎、合规的方式呈现健康管理内容与服务入口。</p>
-      </div>
-      <div class="consumer-list">
-        <article><span>01</span><div><h3>健康知识科普</h3><p>围绕疾病预防、就医准备、检查解读和生活方式管理，提供通俗、可信、可持续更新的内容。</p></div></article>
-        <article><span>02</span><div><h3>健康检测</h3><p>展示适合健康管理场景的检测服务信息，强调适用人群、流程说明与专业机构协作。</p></div></article>
-        <article><span>03</span><div><h3>医疗及保健品</h3><p>展示合规医疗服务与保健产品信息，突出科学依据、适用边界和理性选择。</p></div></article>
-      </div>
-    </section>
-
-    <section class="contact" id="contact">
-      <div><p class="kicker">合作入口</p><h2>把一次会议、一个课题、一次健康服务，连接成长期生态价值。</h2></div>
-      <a class="button" href="mailto:contact@guanghe.health">联系广和众安</a>
-    </section>
+    <section class="hero" id="top"><div class="hero-content"><p class="kicker">连接公众健康、医学科研与健康医疗产业</p><h1>广和众安健康医疗生态服务平台</h1><p class="hero-copy">以产业会议活动为核心入口，向医学科研服务、公众健康服务和产业资源链接延展，构建可信、专业、可协同的健康医疗服务网络。</p><div class="actions"><a class="button primary" href="#business">查看会议活动服务</a><a class="button ghost" href="#ecosystem">浏览服务体系</a></div></div><aside class="hero-panel"><span>产业会议平台定位</span><strong>会议活动与产业合作主阵地</strong><p>用活动聚合专家、机构、产品、渠道和行业内容，再将资源转化为长期服务能力。</p></aside></section>
+    <section class="section" id="ecosystem"><div class="section-head"><p class="kicker">Service model</p><h2>三类服务场景，一套健康医疗生态连接能力</h2></div><div class="grid-3"><a class="card audience-card business" href="#business"><span>产业合作</span><strong>会议活动与产业资源链接</strong><p>围绕健康医疗产业伙伴的品牌发声、学术转化、渠道共建和产业合作，提供会议活动策划与资源对接服务。</p><em>会议活动</em></a><a class="card audience-card doctor" href="#doctor"><span>学术科研</span><strong>科研服务与专业成长支持</strong><p>协助临床专家与科研团队完成课题设计、研究协作、成果传播与专业发展内容建设，提升学术影响力。</p><em>科研协同</em></a><a class="card audience-card" href="#consumer"><span>公众健康</span><strong>健康知识、检测与合规产品</strong><p>通过可信科普、健康检测服务和医疗保健产品展示，帮助公众与家庭更好理解健康管理选择。</p><em>健康服务</em></a></div></section>
+    <section class="section business-section" id="business"><div class="section-head split"><div><p class="kicker">产业合作</p><h2>以会议活动为主，沉淀行业影响力与合作机会</h2></div><p>广和众安帮助健康医疗产业伙伴把会议从“一次活动”升级为“内容生产、专家链接、品牌传播、资源转化”的复合型业务场景。</p></div><div class="event-showcase"><div class="event-main"><p class="kicker">会议活动服务流程</p><h3>从议题策划到会后转化，形成闭环</h3><div class="timeline"><span>01 定位议题</span><span>02 匹配专家</span><span>03 执行活动</span><span>04 内容传播</span><span>05 资源对接</span></div></div><div class="event-types"><span>产业峰会</span><span>专家圆桌</span><span>城市沙龙</span><span>产品发布</span><span>学术教育</span><span>闭门对接</span></div></div><div class="grid-3"><article class="card service-card highlight"><span>核心板块</span><h3>会议活动</h3><ul><li>主题策划与议程设计</li><li>嘉宾邀请与会务执行</li><li>企业展示与内容传播</li></ul></article><article class="card service-card"><span>内容板块</span><h3>行业资讯</h3><ul><li>政策与市场动态梳理</li><li>赛道趋势观察</li><li>活动前后内容沉淀</li></ul></article><article class="card service-card"><span>生态板块</span><h3>资源对接</h3><ul><li>医院与专家资源链接</li><li>企业合作机会匹配</li><li>渠道、媒体与服务商协同</li></ul></article></div></section>
+    <section class="section" id="doctor"><div class="section-head split"><div><p class="kicker">学术科研</p><h2>以科研服务为主，支持医学专业成长</h2></div><p>面向临床专家、科室团队与学术研究者，提供从研究想法到成果传播的协作支持。</p></div><div class="doctor-grid"><article class="card service-card"><span>重点</span><h3>科研服务</h3><p>覆盖选题讨论、研究方案设计、数据与统计协作、论文会议成果转化等科研关键环节。</p></article><article class="card service-card"><span>洞察</span><h3>行业资讯</h3><p>提供学科前沿、指南共识、临床研究动态和产业创新信息，帮助专业群体保持学术视野。</p></article><article class="card service-card"><span>成长</span><h3>职业发展</h3><p>支持个人学术品牌、讲课内容、会议展示、合作网络与长期职业路径建设。</p></article></div></section>
+    <section class="section consumer-section" id="consumer"><div class="section-head split"><div><p class="kicker">公众健康</p><h2>让健康信息与服务更容易被理解和选择</h2></div><p>面向公众和家庭，以清晰、审慎、合规的方式呈现健康管理内容与服务入口。</p></div><div class="consumer-list"><article><span>01</span><div><h3>健康知识科普</h3><p>围绕疾病预防、就医准备、检查解读和生活方式管理，提供通俗、可信、可持续更新的内容。</p></div></article><article><span>02</span><div><h3>健康检测</h3><p>展示适合健康管理场景的检测服务信息，强调适用人群、流程说明与专业机构协作。</p></div></article><article><span>03</span><div><h3>医疗及保健品</h3><p>展示合规医疗服务与保健产品信息，突出科学依据、适用边界和理性选择。</p></div></article></div></section>
+    <section class="contact" id="contact"><div><p class="kicker">合作入口</p><h2>把一次会议、一个课题、一次健康服务，连接成长期生态价值。</h2></div><a class="button" href="mailto:contact@guanghe.health">联系广和众安</a></section>
   </main>
 </body>
 </html>
